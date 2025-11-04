@@ -1,325 +1,365 @@
 <html lang="pt-br" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
-    <title>Aula Venda Mágica - Encante Clientes no WhatsApp</title>
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        .pulse-shadow {
-            animation: pulse-shadow 2s infinite;
-        }
-        @keyframes pulse-shadow {
-            0% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.7); }
-            70% { box-shadow: 0 0 0 10px rgba(22, 163, 74, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0); }
-        }
-        /* Estilo para o acordeão do FAQ */
-        details > summary {
-            list-style: none;
-            cursor: pointer;
-        }
-        details > summary::-webkit-details-marker {
-            display: none;
-        }
-        details[open] summary .arrow-down {
-            transform: rotate(180deg);
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <title>Aula Venda Mágica - Encante Clientes no WhatsApp</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .pulse-shadow {
+            animation: pulse-shadow 2s infinite;
+        }
+        @keyframes pulse-shadow {
+            0% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(22, 163, 74, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0); }
+        }
+        details > summary {
+            list-style: none;
+            cursor: pointer;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        details[open] summary .arrow-down {
+            transform: rotate(180deg);
+        }
+    </style>
 </head>
 <body class="bg-white text-gray-900 antialiased">
 
-        <header class="bg-slate-900 text-white min-h-[90vh] flex flex-col justify-center items-center text-center p-6 lg:p-12">
-        <div class="max-w-xl lg:max-w-3xl">
-            <div class="font-bold text-lg mb-4 tracking-wider">Lidera, por Guilherme Emerim</div>
-            
-            <h1 class="text-4xl lg:text-6xl font-black mb-4 leading-tight">Venda Mais no WhatsApp com "Fotos Mágicas"</h1>
-            
-            <h3 class="text-lg lg:text-xl font-light mt-4 mb-6 text-slate-300">Aprenda a <strong>usar a foto da sua própria cliente como modelo</strong>. Ela se vê usando a peça, se apaixona e fecha a compra na hora!</h3>
-            
-                        <video src="img/video-header.mp4"
-                   autoplay
-                   muted
-                   loop
-                   playsinline
-                   alt="Demonstração do método" 
-                   class="rounded-lg shadow-xl mb-8 w-full max-w-sm mx-auto">
-                   Seu navegador não suporta a tag de vídeo.
-            </video>
-            
-            <a href="#cta" class="bg-green-600 hover:bg-green-700 text-white font-bold text-xl py-4 px-8 rounded-lg shadow-lg uppercase tracking-wider pulse-shadow transition-transform duration-200 ease-in-out inline-block">
-                Quero vender mais agora!
-            </a>
-        </div>
-    </header>
+    <header class="bg-slate-900 text-white min-h-[90vh] flex flex-col justify-center items-center text-center p-6 lg:p-12">
+        <div class="max-w-xl lg:max-w-3xl">
+            <div class="font-bold text-lg mb-4 tracking-wider">Lidera, por Guilherme Emerim</div>
+            
+            <h1 class="text-4xl lg:text-6xl font-black mb-4 leading-tight">Venda Mais no WhatsApp com "Fotos Mágicas"</h1>
+            
+            <h3 class="text-lg lg:text-xl font-light mt-4 mb-6 text-slate-300">Aprenda a <strong>usar a foto da sua própria cliente como modelo</strong>. Ela se vê usando a peça, se apaixona e fecha a compra na hora!</h3>
+            
+            <div class="relative w-full max-w-sm mx-auto mb-8">
+                <video id="headerVideo" src="img/video-header.mp4"
+                       autoplay
+                       muted
+                       loop
+                       playsinline
+                       alt="Demonstração do método" 
+                       class="block rounded-lg shadow-xl w-full">
+                    Seu navegador não suporta a tag de vídeo.
+                </video>
 
-        <section id="problema" class="py-16 lg:py-24 px-6 text-center">
-        <div class="max-w-xl lg:max-w-5xl mx-auto">
-            <h2 class="text-3xl lg:text-4xl font-bold mb-10 lg:mb-16">Você se identifica com isso?</h2>
-            
-                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-8">
-                
-                                <div class="space-y-4">
-                    <p class="text-lg text-gray-700 mb-4">Você tira fotos das suas peças, mas elas parecem amadoras e não despertam interesse?</p>
-                                        <img src="img/foto-1.png" 
-                         alt="Exemplo de foto amadora" 
-                         class="rounded-lg shadow-md mx-auto w-full max-w-xs"
-                         onerror="this.src='https://placehold.co/300x150/E2E8F0/4A5567?text=Print+Conversa+Frustrante'; this.onerror=null;">
-                </div>
-                
-                                <div class="space-y-4">
-                    <p class="text-lg text-gray-700 mb-4">Sua cliente pede fotos no corpo, mas você não tem modelos e acaba perdendo a venda?</p>
-                                        <img src="img/foto-2.png" 
-                         alt="Peças soltas" 
-                          class="rounded-lg shadow-md mx-auto w-full max-w-xs"
-                          onerror="this.src='https://placehold.co/300x150/E2E8F0/4A5567?text=Fotos+de+Pe%C3%A7as+Soltas'; this.onerror=null;">
-                </div>
+                <button id="muteButton" class="absolute bottom-3 right-3 flex items-center space-x-2 bg-black/60 backdrop-blur-sm py-2 px-3 rounded-lg text-white font-semibold text-sm transition-opacity duration-300 hover:bg-black/80">
+                    
+                    <svg id="icon-muted" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 9.75L19.5 12m0 0l2.25 2.25M19.5 12l2.25-2.25M19.5 12l-2.25 2.25m-10.5-6l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z" />
+                    </svg>
+                    
+                    <svg id="icon-unmuted" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 hidden">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0 .83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75m0 0l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72z" />
+                    </svg>
 
-                                <div class="space-y-4 lg:col-span-1">
-                     <p class="text-lg text-gray-700">Você sente que seu feed parece desorganizado, misturando fotos de fornecedor com fotos amadoras, e não passa profissionalismo?</p>
-                </div>
-            </div>
+                    <span id="muteButtonText">Ativar som</span>
+                </button>
+            </div>
+            
+            <a href="#cta" class="bg-green-600 hover:bg-green-700 text-white font-bold text-xl py-4 px-8 rounded-lg shadow-lg uppercase tracking-wider pulse-shadow transition-transform duration-200 ease-in-out inline-block text-center">Quero vender mais agora!</a>
+        </div>
+    </header>
 
-            <p class="text-xl lg:text-2xl font-semibold mt-12 lg:mt-16 max-w-2xl mx-auto">Se você respondeu SIM, a culpa não é sua. E a solução é mais simples do que você imagina.</p>
-        </div>
-    </section>
+    <section id="problema" class="py-16 lg:py-24 px-6 text-center">
+        <div class="max-w-xl lg:max-w-5xl mx-auto">
+            <h2 class="text-3xl lg:text-4xl font-bold mb-10 lg:mb-16">Você se identifica com isso?</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-8">
+                
+                <div class="space-y-4">
+                    <p class="text-lg text-gray-700 mb-4">Você tira fotos das suas peças, mas elas parecem amadoras e não despertam interesse?</p>
+                    <img src="img/foto-1.png" 
+                         alt="Exemplo de foto amadora" 
+                         class="rounded-lg shadow-md mx-auto w-full max-w-xs"
+                         onerror="this.src='https://placehold.co/300x150/E2E8F0/4A5567?text=Print+Conversa+Frustrante'; this.onerror=null;">
+                </div>
+                
+                <div class="space-y-4">
+                    <p class="text-lg text-gray-700 mb-4">Sua cliente pede fotos no corpo, mas você não tem modelos e acaba perdendo a venda?</p>
+                    <img src="img/foto-2.png" 
+                         alt="Peças soltas" 
+                          class="rounded-lg shadow-md mx-auto w-full max-w-xs"
+                          onerror="this.src='https://placehold.co/300x150/E2E8F0/4A5567?text=Fotos+de+Pe%C3%A7as+Soltas'; this.onerror=null;">
+                </div>
 
-        <section id="solucao" class="bg-gray-100 py-16 lg:py-24 px-6 text-center lg:text-left">
-B      <div class="max-w-xl lg:max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            
-                        <div>
-                                <img src="img/foto-3.jpg" 
-                     alt="Instrutor da aula" 
-                     class="rounded-lg shadow-xl mx-auto mb-8 w-full max-w-xs lg:max-w-sm"
-                     onerror="this.src='https://placehold.co/300x200/CBD5E1/4A5567?text=Foto+do+Instrutor'; this.onerror=null;">
-            </div>
+                <div class="space-y-4 lg:col-span-1">
+                     <p class="text-lg text-gray-700">Você sente que seu feed parece desorganizado, misturando fotos de fornecedor com fotos amadoras, e não passa profissionalismo?</p>
+                </div>
+            </div>
 
-                        <div>
-                <h2 class="text-3xl lg:text-4xl font-bold mb-6">Apresentando a Aula "Venda Mágica no WhatsApp"</h2>
+            <p class="text-xl lg:text-2xl font-semibold mt-12 lg:mt-16 max-w-2xl mx-auto">Se você respondeu SIM, a culpa não é sua. E a solução é mais simples do que você imagina.</p>
+        </div>
+    </section>
 
-                <p class="text-lg text-gray-700 mb-8 max-w-md mx-auto lg:mx-0">O método passo a passo para você transformar fotos de peças soltas em um argumento de venda irresistível, diretamente do seu celular.</p>
+    <section id="solucao" class="bg-gray-100 py-16 lg:py-24 px-6 text-center">
+        <div class="max-w-xl lg:max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            
+            <div>
+                <img src="img/foto-3.jpg" 
+                     alt="Instrutor da aula" 
+                     class="rounded-lg shadow-xl mx-auto mb-8 w-full max-w-xs lg:max-w-sm"
+                     onerror="this.src='https://placehold.co/300x200/CBD5E1/4A5567?text=Foto+do+Instrutor'; this.onerror=null;">
+            </div>
 
-                <ul class="space-y-4 text-left max-w-md mx-auto">
-                    <li class="flex items-start">
-                        <span class="text-green-500 text-2xl mr-3">✓</span>
-                        <span class="text-gray-700"><strong>Feche vendas no 1-a-1:</strong> Faça sua cliente se ver usando a peça e elimine a objeção "não sei se vai ficar bom em mim".</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-green-500 text-2xl mr-3">✓</span>
-                        <span class="text-gray-700"><strong>Aumente a conversão:</strong> Transforme "vou pensar" em "quero o PIX" usando a própria foto da cliente como modelo.</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-green-500 text-2xl mr-3">✓</span>
-                        <span class="text-gray-700"><strong>Profissionalize seu feed:</strong> Aprenda a criar fotos incríveis para seu catálogo (mesmo sem modelos) e atraia mais clientes.</span>
-                    </li>
-                </ul>
+            <div>
+                <h2 class="text-3xl lg:text-4xl font-bold mb-6">Apresentando a Aula "Venda Mágica no WhatsApp"</h2>
 
-                <a href="#cta" class="bg-green-600 hover:bg-green-700 text-white font-bold text-lg py-4 px-8 rounded-lg shadow-lg uppercase tracking-wider transition-transform duration-200 ease-in-out mt-10 inline-block">
-                    Quero vender mais com fotos!
-                </a>
-            </div>
-        </div>
-    </section>
+                <p class="text-lg text-gray-700 mb-8 max-w-md mx-auto lg:mx-0">O método passo a passo para você transformar fotos de peças soltas em um argumento de venda irresistível, diretamente do seu celular.</p>
+                
+                <ul class="space-y-4 text-left max-w-md mx-auto">
+                    <li class="flex items-start">
+                        <span class="text-green-500 text-2xl mr-3">✓</span>
+                        <span class="text-gray-700"><strong>Feche vendas no 1-a-1:</strong> Faça sua cliente se ver usando a peça e elimine a objeção "não sei se vai ficar bom em mim".</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-green-500 text-2xl mr-3">✓</span>
+                        <span class="text-gray-700"><strong>Aumente a conversão:</strong> Transforme "vou pensar" em "quero o PIX" usando a própria foto da cliente como modelo.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-green-500 text-2xl mr-3">✓</span>
+                        <span class="text-gray-700"><strong>Profissionalize seu feed:</strong> Aprenda a criar fotos incríveis para seu catálogo (mesmo sem modelos) e atraia mais clientes.</span>
+                    </li>
+                </ul>
 
-        <section id="prova" class="py-16 lg:py-24 px-6 text-center">
-        <div class="max-w-xl lg:max-w-5xl mx-auto">
-            <h2 class="text-3xl lg:text-4xl font-bold mb-10 lg:mb-16">Veja o que <span class="text-green-600">Lojistas</span> já estão fazendo!</h2>
-            
-                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                                <div>
-                                        <img src="img/foto-4.png" 
-                         alt="Carrossel de antes e depois" 
-                         class="rounded-lg shadow-lg mx-auto w-full max-w-sm"
-                         onerror="this.src='https://placehold.co/350x250/E2E8F0/4A5567?text=Carrossel+Antes+e+Depois'; this.onerror=null;">
-                    <p class="text-sm text-gray-500 mt-2">Um antes e depois impressionante</p>
-                </div>
-                
-                                <div>
-                                        <img src="img/foto-5.png" 
-                         alt="Depoimento de lojista 1" 
-                         class="rounded-lg shadow-md mx-auto w-full max-w-xs"
-                         onerror="this.src='https://placehold.co/300x200/E2E8F0/4A5567?text=Print+Depoimento+Lojista+1'; this.onerror=null;">
-                    <p class="text-sm text-gray-500 mt-2">Print de conversa com cliente</p>
-Â             </div>
-                         
-                                <div>
-                                        <img src="img/foto-6.png" 
-                         alt="Depoimento de lojista 2" 
-                         class="rounded-lg shadow-md mx-auto w-full max-w-xs"
-                         onerror="this.src='https://placehold.co/300x200/E2E8F0/4A5567?text=Print+Depoimento+Lojista+2'; this.onerror=null;">
-                    <p class="text-sm text-gray-500 mt-2">Depoimento de lojista</p>
-                </div>
-            </div>
-        </div>
-    </section>
+                <a href="#cta" class="bg-green-600 hover:bg-green-700 text-white font-bold text-lg py-4 px-8 rounded-lg shadow-lg uppercase tracking-wider transition-transform duration-200 ease-in-out mt-10 inline-block text-center">Quero vender mais com fotos!</a>
+            </div>
+        </div>
+    </section>
 
-        <section id="entrega" class="bg-gray-100 py-16 lg:py-24 px-6 text-center">
-        <div class="max-w-xl lg:max-w-4xl mx-auto">
-            <h2 class="text-3xl lg:text-4xl font-bold mb-12">Acesso Completo e Imediato a:</h2>
-            
-            <ul class="space-y-6 text-left max-w-md mx-auto">
-                <li class="flex items-center p-4 bg-white rounded-lg shadow">
-                    <span class="text-green-500 text-3xl mr-4">✔</span>
-                    <span class="text-gray-700 text-lg"><strong>Aula Principal (passo a passo):</strong> Onde eu te mostro na tela do celular, clique a clique, como fazer a mágica acontecer.</span>
-                </li>
-                <li class="flex items-center p-4 bg-white rounded-lg shadow">
-                    <span class="text-green-500 text-3xl mr-4">✔</span>
-                    <span class="text-gray-700 text-lg"><strong>Guia de Aplicativos:</strong> A lista exata dos aplicativos (a maioria gratuitos) que você vai precisar.</span>
-                </li>
-                                <li class="flex items-center p-4 bg-white rounded-lg shadow">
-                    <span class="text-green-500 text-3xl mr-4">✔</span>
-                    <span class="text-gray-700 text-lg"><strong>Script de Atendimento:</strong> O texto pronto para você pedir a foto para sua cliente no WhatsApp do jeito certo.</span>
-                </li>
-            </ul>
-        </div>
-    </section>
+    <section id="prova" class="py-16 lg:py-24 px-6 text-center">
+        <div class="max-w-xl lg:max-w-5xl mx-auto">
+            <h2 class="text-3xl lg:text-4xl font-bold mb-10 lg:mb-16">Veja o que <span class="text-green-600">Lojistas</span> já estão fazendo!</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div>
+                    <img src="img/foto-4.png" 
+                         alt="Carrossel de antes e depois" 
+                         class="rounded-lg shadow-lg mx-auto w-full max-w-sm"
+                         onerror="this.src='https://placehold.co/350x250/E2E8F0/4A5567?text=Carrossel+Antes+e+Depois'; this.onerror=null;">
+                    <p class="text-sm text-gray-500 mt-2">Um antes e depois impressionante</p>
+                </div>
+                
+                <div>
+                    <img src="img/foto-5.png" 
+                         alt="Depoimento de lojista 1" 
+                         class="rounded-lg shadow-md mx-auto w-full max-w-xs"
+                         onerror="this.src='https://placehold.co/300x200/E2E8F0/4A5567?text=Print+Depoimento+Lojista+1'; this.onerror=null;">
+                    <p class="text-sm text-gray-500 mt-2">Print de conversa com cliente</p>
+                </div>
+                
+                <div>
+                    <img src="img/foto-6.png"
+                         alt="Depoimento de lojista 2" 
+                         class="rounded-lg shadow-md mx-auto w-full max-w-xs"
+                         onerror="this.src='https://placehold.co/300x200/E2E8F0/4A5567?text=Print+Depoimento+Lojista+2'; this.onerror=null;">
+                    <p class="text-sm text-gray-500 mt-2">Depoimento de lojista</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <section id="bonus" class="py-16 lg:py-24 px-6 text-center lg:text-left">
-        <div class="max-w-xl lg:max-w-5xl mx-auto p-8 lg:p-12 bg-slate-900 text-white rounded-lg shadow-xl grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
-            
-                        <div class="lg:col-span-2">
-                <span class="text-yellow-400 font-bold uppercase tracking-wider">Único Bônus</span>
-                <h2 class="text-3xl lg:text-4xl font-bold mt-2 mb-4">Mini-Aula "Feed Vitrine"</h2>
-                <p class="text-lg text-slate-300 mb-4">De nada adianta ser ótima no atendimento se o seu feed não atrai clientes. Vou te mostrar como montar uma vitrine (feed) que seja encantadora, usando as roupas que você tem, em modelos reais ou de IA, para profissionalizar sua marca.</p>
-                <span class="text-xl font-semibold">Vendido separadamente por <span class="text-yellow-400">R$ 9,90</span></span>
-                <br>
-                <span class="text-2xl font-bold text-white">HOJE, SAI DE GRAÇA!</span>
-            </div>
+    <section id="entrega" class="bg-gray-100 py-16 lg:py-24 px-6 text-center">
+        <div class="max-w-xl lg:max-w-4xl mx-auto">
+            <h2 class="text-3xl lg:text-4xl font-bold mb-12">Acesso Completo e Imediato a:</h2>
+            
+            <ul class="space-y-6 text-left max-w-md mx-auto">
+                <li class="flex items-center p-4 bg-white rounded-lg shadow">
+                    <span class="text-green-500 text-3xl mr-4">✔</span>
+                    <span class="text-gray-700 text-lg"><strong>Aula Principal (passo a passo):</strong> Onde eu te mostro na tela do celular, clique a clique, como fazer a mágica acontecer.</span>
+                </li>
+                <li class="flex items-center p-4 bg-white rounded-lg shadow">
+                    <span class="text-green-500 text-3xl mr-4">✔</span>
+                    <span class="text-gray-700 text-lg"><strong>Guia de Aplicativos:</strong> A lista exata dos aplicativos (a maioria gratuitos) que você vai precisar.</span>
+                </li>
+                <li class="flex items-center p-4 bg-white rounded-lg shadow">
+                    <span class="text-green-500 text-3xl mr-4">✔</span>
+                    <span class="text-gray-700 text-lg"><strong>Script de Atendimento:</strong> O texto pronto para você pedir a foto para sua cliente no WhatsApp do jeito certo.</span>
+                </li>
+            </ul>
+        </div>
+    </section>
 
-                        <div class="flex justify-center">
-                                <img src="img/foto-7.png" 
-                     alt="Bônus Feed Vitrine" 
-                     class="rounded-lg shadow-md mx-auto w-full max-w-xs"
-                     onerror="this.src='https://placehold.co/300x300/475569/E2E8F0?text=B%C3%94NUS+FEED+VITRINE'; this.onerror=null;">
-            </div>
-        </div>
-    </section>
+    <section id="bonus" class="py-16 lg:py-24 px-6 text-center">
+        <div class="max-w-xl lg:max-w-5xl mx-auto p-8 lg:p-12 bg-slate-900 text-white rounded-lg shadow-xl grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+            
+            <div class="lg:col-span-2">
+                <span class="text-yellow-400 font-bold uppercase tracking-wider">Único Bônus</span>
+                <h2 class="text-3xl lg:text-4xl font-bold mt-2 mb-4">Mini-Aula "Feed Vitrine"</h2>
+                <p class="text-lg text-slate-300 mb-4">De nada adianta ser ótima no atendimento se o seu feed não atrai clientes. Vou te mostrar como montar uma vitrine (feed) que seja encantadora, usando as roupas que você tem, em modelos reais ou de IA, para profissionalizar sua marca.</p>
+                <span class="text-xl font-semibold">Vendido separadamente por <span class="text-yellow-400">R$ 9,90</span></span>
+                <br>
+                <span class="text-2xl font-bold text-white">HOJE, SAI DE GRAÇA!</span>
+            </div>
 
-        <section id="cta" class="py-16 lg:py-24 px-6 text-center bg-green-50">
-        <div class="max-w-xl lg:max-w-2xl mx-auto">
-            
-            <div class="max-w-md mx-auto mb-10">
-                                <svg class="w-12 h-12 mx-auto text-yellow-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                <h3 class="text-xl font-semibold text-gray-800 mb-3">O tempo está passando...</h3>
-                <p class="text-gray-700">O mercado de moda é rápido. Enquanto você analisa, sua concorrente está usando essa técnica e fechando vendas no WhatsApp. <b>Não inovar no atendimento é deixar dinheiro na mesa</b> todos os dias.</p>
-            </div>
-            
-            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Transforme Conversas em Vendas com Fotos Incríveis</h2>
-            
-            <p class="text-lg text-gray-600 line-through">De R$ 67,00</p>
-            <p class="text-5xl lg:text-6xl font-black text-green-700 mb-2">6x de R$ 4,90</p>
-            <p class="text-xl font-semibold text-gray-800 mb-8">ou R$ 27,00 à vista</p>
-            
-            <a href="Link Fotos Mágicas:
-https://pay.kiwify.com.br/5ZriJpG" class="bg-green-600 hover:bg-green-700 text-white font-bold text-2xl py-5 px-10 rounded-lg shadow-lg uppercase tracking-wider pulse-shadow transition-transform duration-200 ease-in-out inline-block">
-                Comprar Acesso Imediato
-            </a>
-            
-            <p class="text-sm text-gray-600 mt-4">Link seguro de pagamento. Compra 100% segura. Acesso imediato.</p>
-            
-                        <img src="img/foto-8.png" 
-                 alt="Formas de Pagamento: PIX e Cartão" 
-                 class="mt-2 mx-auto opacity-70 w-48"
-                 onerror="this.src='https://placehold.co/200x40/F0FDF4/4A5567?text=PIX+%7C+CART%C3%83O'; this.onerror=null;">
-        </div>
-    </section>
+            <div class="flex justify-center">
+                <img src="img/foto-7.png" 
+                     alt="Bônus Feed Vitrine" 
+                     class="rounded-lg shadow-md mx-auto w-full max-w-xs"
+                     onerror="this.src='https://placehold.co/300x300/475569/E2E8F0?text=B%C3%94NUS+FEED+VITRINE'; this.onerror=null;">
+            </div>
+        </div>
+    </section>
 
-        <section id="garantia" class="py-16 lg:py-24 px-6 text-center">
-        <div class="max-w-xl lg:max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
-            
-                        <div class="flex justify-center lg:justify-end">
-                                <img src="img/foto-9.png" 
-                     alt="Selo de Garantia de 7 Dias" 
-                     class="rounded-full mx-auto w-40 h-40"
-                     onerror="this.src='https://placehold.co/150x150/E2E8F0/16A34A?text=Selo+7+Dias'; this.onerror=null;">
-            </div>
-                     
-                        <div class="lg:col-span-2 lg:text-left">
-                <h2 class="text-3xl lg:text-4xl font-bold mb-4">Risco Zero para Você</h2>
-                <p class="text-lg text-gray-700 max-w-lg">Você tem 7 dias para assistir à aula e aplicar o método. Se por qualquer motivo você não ficar satisfeita, basta nos enviar um e-mail e nós devolveremos 100% do seu investimento. Sem perguntas, sem burocracia.</p>
-            </div>
-        </div>
-    </section>
+    <section id="cta" class="py-16 lg:py-24 px-6 text-center bg-green-50">
+        <div class="max-w-xl lg:max-w-2xl mx-auto">
+            
+            <div class="max-w-md mx-auto mb-10">
+                <svg class="w-12 h-12 mx-auto text-yellow-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">O tempo está passando...</h3>
+                <p class="text-gray-700">O mercado de moda é rápido. Enquanto você analisa, sua concorrente está usando essa técnica e fechando vendas no WhatsApp. <b>Não inovar no atendimento é deixar dinheiro na mesa</b> todos os dias.</p>
+            </div>
+            
+            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Transforme Conversas em Vendas com Fotos Incríveis</h2>
+            
+            <p class="text-lg text-gray-600 line-through">De R$ 67,00</p>
+            <p class="text-5xl lg:text-6xl font-black text-green-700 mb-2">6x de R$ 4,90</p>
+            <p class="text-xl font-semibold text-gray-800 mb-8">ou R$ 27,00 à vista</p>
+            
+            <a href="https://pay.kiwify.com.br/5ZriJpG" class="bg-green-600 hover:bg-green-700 text-white font-bold text-2xl py-5 px-10 rounded-lg shadow-lg uppercase tracking-wider pulse-shadow transition-transform duration-200 ease-in-out inline-block text-center">Comprar Acesso Imediato</a>
+            
+            <p class="text-sm text-gray-600 mt-4">Link seguro de pagamento. Compra 100% segura. Acesso imediato.</p>
+            
+            <img src="img/foto-8.png" 
+                 alt="Formas de Pagamento: PIX e Cartão" 
+                 class="mt-2 mx-auto opacity-70 w-48"
+                 onerror="this.src='https://placehold.co/200x40/F0FDF4/4A5567?text=PIX+%7C+CART%C3%83O'; this.onerror=null;">
+        </div>
+    </section>
 
-        <section id="faq" class="py-16 lg:py-24 px-6 bg-gray-50">
-        <div class="max-w-xl lg:max-w-3xl mx-auto">
-            <h2 class="text-3xl lg:text-4xl font-bold text-center mb-10">Perguntas Frequentes</h2>
-            <div class="space-y-4">
-                
-                <details class="bg-white p-5 rounded-lg shadow group" open>
-                    <summary class="flex justify-between items-center font-semibold">
-                        Preciso ter um celular potente?
-                        <span class="arrow-down transform transition-transform duration-200">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </span>
-                    </summary>
-                    <p class="text-gray-600 mt-3">Não! Os aplicativos que ensinamos são leves e rodam na maioria dos smartphones atuais (Android e iPhone).</p>
-                </details>
-                
-                <details class="bg-white p-5 rounded-lg shadow group">
-                    <summary class="flex justify-between items-center font-semibold">
-                        Preciso ter conhecimento em design?
-                        <span class="arrow-down transform transition-transform duration-200">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </span>
-                    </summary>
-                    <p class="text-gray-600 mt-3">Absolutamente não! O método foi criado para iniciantes. É um passo a passo simples de seguir, focado em lojistas e não em designers.</p>
-                </details>
+    <section id="garantia" class="py-16 lg:py-24 px-6 text-center">
+        <div class="max-w-xl lg:max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+            
+            <div class="flex justify-center lg:justify-end">
+                <img src="img/foto-9.png" 
+                     alt="Selo de Garantia de 7 Dias" 
+                     class="rounded-full mx-auto w-40 h-40"
+                     onerror="this.src='https://placehold.co/150x150/E2E8F0/16A34A?text=Selo+7+Dias'; this.onerror=null;">
+            </div>
+                     
+            <div class="lg:col-span-2">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4">Risco Zero para Você</h2>
+                <p class="text-lg text-gray-700 max-w-lg mx-auto">Você tem 7 dias para assistir à aula e aplicar o método. Se por qualquer motivo você não ficar satisfeita, basta nos enviar um e-mail e nós devolveremos 100% do seu investimento. Sem perguntas, sem burocracia.</p>
+            </div>
+        </div>
+    </section>
 
-                <details class="bg-white p-5 rounded-lg shadow group">
-                    <summary class="flex justify-between items-center font-semibold">
-                        E se a cliente não souber tirar a foto?
-                        <span class="arrow-down transform transition-transform duration-200">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </span>
-                    </summary>
-D             <p class="text-gray-600 mt-3">É por isso que incluímos o "Script de Atendimento". Ele ensina como você deve pedir e orientar sua cliente a tirar uma foto simples (de pijama, roupa de academia, etc.) para que a montagem funcione perfeitamente.</p>
-                </details>
+    <section id="faq" class="py-16 lg:py-24 px-6 bg-gray-50">
+        <div class="max-w-xl lg:max-w-3xl mx-auto">
+            <h2 class="text-3xl lg:text-4xl font-bold text-center mb-10">Perguntas Frequentes</h2>
+            <div class="space-y-4">
+                
+                <details class="bg-white p-5 rounded-lg shadow group" open>
+                    <summary class="flex justify-between items-center font-semibold">
+                        Preciso ter um celular potente?
+                        <span class="arrow-down transform transition-transform duration-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </span>
+                    </summary>
+                    <p class="text-gray-600 mt-3">Não! Os aplicativos que ensinamos são leves e rodam na maioria dos smartphones atuais (Android e iPhone).</p>
+                </details>
+                
+                <details class="bg-white p-5 rounded-lg shadow group">
+                    <summary class="flex justify-between items-center font-semibold">
+                        Preciso ter conhecimento em design?
+                        <span class="arrow-down transform transition-transform duration-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </span>
+                    </summary>
+                    <p class="text-gray-600 mt-3">Absolutamente não! O método foi criado para iniciantes. É um passo a passo simples de seguir, focado em lojistas e não em designers.</p>
+                </details>
 
-                <details class="bg-white p-5 rounded-lg shadow group">
-                    <summary class="flex justify-between items-center font-semibold">
-                        Por quanto tempo terei acesso?
-                        <span class="arrow-down transform transition-transform duration-200">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </span>
-                    </summary>
-                    <p class="text-gray-600 mt-3">O acesso à aula e ao bônus é vitalício! Você pode assistir quantas vezes quiser, para sempre, e aproveitar todas as atualizações futuras.</p>
-                </details>
+                <details class="bg-white p-5 rounded-lg shadow group">
+                    <summary class="flex justify-between items-center font-semibold">
+                        E se a cliente não souber tirar a foto?
+                        <span class="arrow-down transform transition-transform duration-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </span>
+                    </summary>
+                    <p class="text-gray-600 mt-3">É por isso que incluímos o "Script de Atendimento". Ele ensina como você deve pedir e orientar sua cliente a tirar uma foto simples (de pijama, roupa de academia, etc.) para que a montagem funcione perfeitamente.</p>
+                </details>
 
-                <details class="bg-white p-5 rounded-lg shadow group">
-                    <summary class="flex justify-between items-center font-semibold">
-                        Como recebo o acesso?
-                        <span class="arrow-down transform transition-transform duration-200">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </span>
-                    </summary>
-E             <p class="text-gray-600 mt-3">Assim que o pagamento for confirmado (via PIX e Cartão é na hora), você receberá um e-mail da Kiwify com todas as instruções para acessar a plataforma do curso.</p>
-                </details>
+                <details class="bg-white p-5 rounded-lg shadow group">
+                    <summary class="flex justify-between items-center font-semibold">
+                        Por quanto tempo terei acesso?
+                        <span class="arrow-down transform transition-transform duration-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </span>
+                    </summary>
+                    <p class="text-gray-600 mt-3">O acesso à aula e ao bônus é vitalício! Você pode assistir quantas vezes quiser, para sempre, e aproveitar todas as atualizações futuras.</p>
+                </details>
 
-            </div>
-        </div>
-    </section>
+                <details class="bg-white p-5 rounded-lg shadow group">
+                    <summary class="flex justify-between items-center font-semibold">
+                        Como recebo o acesso?
+                        <span class="arrow-down transform transition-transform duration-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </span>
+                    </summary>
+                    <p class="text-gray-600 mt-3">Assim que o pagamento for confirmado (via PIX e Cartão é na hora), você receberá um e-mail da Kiwify com todas as instruções para acessar a plataforma do curso.</p>
+                </details>
 
-        <footer class="bg-slate-900 text-slate-400 py-12 px-6 text-center">
-        <div class="max-w-xl lg:max-w-4xl mx-auto">
-            <p class="font-bold text-lg text-white mb-4">Lidera, por Guilherme Emerim</p>
-            <p class="text-sm">© 2025 - Todos os direitos reservados</p>
-            <p class="text-sm mt-2">Este produto não garante a obtenção de resultados. Qualquer referência ao desempenho de uma estratégia não deve ser interpretada como uma garantia de resultados.</p>
-                    </div>
-    </footer>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-400 py-12 px-6 text-center">
+        <div class="max-w-xl lg:max-w-4xl mx-auto">
+            <p class="font-bold text-lg text-white mb-4">Lidera, por Guilherme Emerim</p>
+            <p class="text-sm">© 2025 - Todos os direitos reservados</p>
+            <p class="text-sm mt-2">Este produto não garante a obtenção de resultados. Qualquer referência ao desempenho de uma estratégia não deve ser interpretada como uma garantia de resultados.</p>
+        </div>
+    </footer>
+
+
+    <script>
+        // Espera o documento carregar para rodar o script
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // Pega os elementos do HTML pelos IDs
+            const video = document.getElementById('headerVideo');
+            const muteButton = document.getElementById('muteButton');
+            const iconMuted = document.getElementById('icon-muted');
+            const iconUnmuted = document.getElementById('icon-unmuted');
+            const buttonText = document.getElementById('muteButtonText');
+
+            // Adiciona um "ouvinte de clique" ao botão
+            muteButton.addEventListener('click', () => {
+                
+                // Verifica se o vídeo está mutado
+                if (video.muted) {
+                    // Se estiver mutado:
+                    video.muted = false; // Tira o mudo do vídeo
+                    iconMuted.classList.add('hidden'); // Esconde o ícone de mudo
+                    iconUnmuted.classList.remove('hidden'); // Mostra o ícone de som
+                    buttonText.textContent = 'Silenciar'; // Muda o texto
+                } else {
+                    // Se estiver com som:
+                    video.muted = true; // Muta o vídeo
+                    iconMuted.classList.remove('hidden'); // Mostra o ícone de mudo
+                    iconUnmuted.classList.add('hidden'); // Esconde o ícone de som
+                    buttonText.textContent = 'Ativar som'; // Muda o texto
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
