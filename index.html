@@ -39,15 +39,30 @@
             
             <h3 class="text-lg lg:text-xl font-light mt-4 mb-6 text-slate-300">Aprenda a <strong>usar a foto da sua própria cliente como modelo</strong>. Ela se vê usando a peça, se apaixona e fecha a compra na hora!</h3>
             
-            <video src="img/video-header.mp4"
-                   autoplay
-                   muted
-                   loop
-                   playsinline
-                   alt="Demonstração do método" 
-                   class="block rounded-lg shadow-xl mb-8 w-full max-w-sm mx-auto">
-                Seu navegador não suporta a tag de vídeo.
-            </video>
+            <div class="relative w-full max-w-sm mx-auto mb-8">
+                <video id="headerVideo" src="img/video-header.mp4"
+                       autoplay
+                       muted
+                       loop
+                       playsinline
+                       alt="Demonstração do método" 
+                       class="block rounded-lg shadow-xl w-full">
+                    Seu navegador não suporta a tag de vídeo.
+                </video>
+
+                <button id="muteButton" class="absolute bottom-3 right-3 flex items-center space-x-2 bg-black/60 backdrop-blur-sm py-2 px-3 rounded-lg text-white font-semibold text-sm transition-opacity duration-300 hover:bg-black/80">
+                    
+                    <svg id="icon-muted" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 9.75L19.5 12m0 0l2.25 2.25M19.5 12l2.25-2.25M19.5 12l-2.25 2.25m-10.5-6l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z" />
+                    </svg>
+                    
+                    <svg id="icon-unmuted" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 hidden">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0 .83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75m0 0l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72z" />
+                    </svg>
+
+                    <span id="muteButtonText">Ativar som</span>
+                </button>
+            </div>
             
             <a href="#cta" class="bg-green-600 hover:bg-green-700 text-white font-bold text-xl py-4 px-8 rounded-lg shadow-lg uppercase tracking-wider pulse-shadow transition-transform duration-200 ease-in-out inline-block text-center">Quero vender mais agora!</a>
         </div>
@@ -312,6 +327,39 @@
             <p class="text-sm mt-2">Este produto não garante a obtenção de resultados. Qualquer referência ao desempenho de uma estratégia não deve ser interpretada como uma garantia de resultados.</p>
         </div>
     </footer>
+
+
+    <script>
+        // Espera o documento carregar para rodar o script
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // Pega os elementos do HTML pelos IDs
+            const video = document.getElementById('headerVideo');
+            const muteButton = document.getElementById('muteButton');
+            const iconMuted = document.getElementById('icon-muted');
+            const iconUnmuted = document.getElementById('icon-unmuted');
+            const buttonText = document.getElementById('muteButtonText');
+
+            // Adiciona um "ouvinte de clique" ao botão
+            muteButton.addEventListener('click', () => {
+                
+                // Verifica se o vídeo está mutado
+                if (video.muted) {
+                    // Se estiver mutado:
+                    video.muted = false; // Tira o mudo do vídeo
+                    iconMuted.classList.add('hidden'); // Esconde o ícone de mudo
+                    iconUnmuted.classList.remove('hidden'); // Mostra o ícone de som
+                    buttonText.textContent = 'Silenciar'; // Muda o texto
+                } else {
+                    // Se estiver com som:
+                    video.muted = true; // Muta o vídeo
+                    iconMuted.classList.remove('hidden'); // Mostra o ícone de mudo
+                    iconUnmuted.classList.add('hidden'); // Esconde o ícone de som
+                    buttonText.textContent = 'Ativar som'; // Muda o texto
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
